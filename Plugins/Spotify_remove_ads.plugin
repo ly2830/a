@@ -1,5 +1,5 @@
-#!name = Spotify去广告
-#!desc = 过滤Spotify播放广告，移除随机播放，恢复歌手和专辑列表的正常展示。建议重新登录并清除缓存，且音质不能设置为超高，仅建议iOS 15及以上设备使用。
+#!name = Spotify
+#!desc = 2024.05.27 部分解锁premium,音质不能设置为超高(建议登录后再打开脚本,重启app等待脚本生效)。
 #!openUrl = https://apps.apple.com/app/id324684580
 #!author = app2smile[https://github.com/app2smile]
 #!tag = 去广告
@@ -8,11 +8,11 @@
 #!loon_version = 3.2.1(749)
 #!homepage = https://github.com/luestr/ProxyResource/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Spotify.png
-#!date = 2024-04-28 15:54:48
+#!date = 2024-05-27 15:54:48
 
 [Script]
-http-request ^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/ script-path = https://loon.126996.xyz/Resource/Script/Spotify/Spotify_remove_ads.js, timeout = 10, tag = JSON处理
-http-response ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ script-path = https://loon.126996.xyz/Resource/Script/Spotify/Spotify_proto.js, requires-body = true, binary-body-mode = true, timeout = 10, tag = Proto处理
+http-request ^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/ script-path = https://raw.githubusercontent.com/ly2830/a/refs/heads/main/Scripts/spotify/spotify-json.js, timeout = 10, tag = JSON处理
+http-response ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ script-path = https://raw.githubusercontent.com/ly2830/a/refs/heads/main/Scripts/spotify/Spotify_proto.js, requires-body = true, binary-body-mode = true, timeout = 10, tag = Proto处理
 
 [MitM]
 hostname = spclient.wg.spotify.com
