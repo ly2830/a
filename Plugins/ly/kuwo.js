@@ -1,5 +1,5 @@
-#!name=kuwomusic
-#!desc=kuwomusic
+#!name=酷我音乐[ VIP+净化 ]
+#!desc=酷我一起听歌
 #!icon=https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1078.png
 
 [Rewrite]
