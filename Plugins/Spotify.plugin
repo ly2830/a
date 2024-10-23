@@ -1,12 +1,5 @@
 #!name = Spotify
 #!desc = 2024.05.27 部分解锁premium,音质不能设置为超高(建议登录后再打开脚本,重启app等待脚本生效)。
-#!openUrl = https://apps.apple.com/app/id324684580
-#!author = app2smile[https://github.com/app2smile]
-#!tag = 去广告
-#!system = 
-#!system_version = 
-#!loon_version = 3.2.1(749)
-#!homepage = https://github.com/luestr/ProxyResource/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Spotify.png
 #!date = 2024-05-27 15:54:48
 
