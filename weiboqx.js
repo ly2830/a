@@ -69,9 +69,6 @@ http-response ^https:\/\/api\.weibo\.cn\/2\/searchall\? script-path = https://ra
 http-response ^https:\/\/bootpreload\.uve\.weibo\.com\/v[12]\/ad\/preload script-path = https://raw.githubusercontent.com/ly2830/a/refs/heads/main/Scripts/weibo.js, requires-body = true, tag = 移除开屏广告
 http-response ^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php script-path = https://raw.githubusercontent.com/ly2830/a/refs/heads/main/Scripts/weibo.js, requires-body = true, tag = 移除开屏广告
 http-response ^https:\/\/wbapp\.uve\.weibo\.com\/(?:preload\/get_ad|wbapplua\/wbpullad\.lua) script-path = https://raw.githubusercontent.com/ly2830/a/refs/heads/main/Scripts/weibo.js, requires-body = true, tag = 移除开屏广告
-
-# 会员图标
-http-response ^https:\/\/new\.vip\.weibo\.cn\/aj\/appicon\/list\? script-path = https://raw.githubusercontent.com/ly2830/a/refs/heads/main/Icons/app/weibo.png, requires-body = true, tag = 会员图标
-
+  
 [MITM]
 hostname = *.weibo.cn, *.weibo.com, weibo.com
