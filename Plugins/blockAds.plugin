@@ -3657,7 +3657,7 @@ http-response ^https:\/\/app-v1\.ecoliving168\.com\/api\/v1\/movie\/index_recomm
 
 # >>>>>>>>>>>>>>> ✅ F ✅ <<<<<<<<<<<<<<
 # > Flightradar24
-http-response ^https?:\/\/mobile\.flightradar24\.com\/mobile\/(user-session|subscribe) script-path=https://raw.githubusercontent.com/ly2830/a/refs/heads/main/fmz200Scripts/QuantumultX/scripts/Flightradar24.js, requires-body=true, timeout=60, tag=Flightradar24解锁
+http-response ^https?:\/\/mobile\.flightradar24\.com\/mobile\/(user-session|subscribe) script-path=https://raw.githubusercontent.com/ly2830/a/refs/heads/main/Flightradar24.js, requires-body=true, timeout=60, tag=Flightradar24解锁
 
 # > 飞客茶馆
 http-response ^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=threadpost&.+?&page=1 script-path=https://raw.githubusercontent.com/ly2830/a/refs/heads/main/fmz200Scripts/fly.js, requires-body=true, timeout=60, tag=飞客茶馆
