@@ -11,7 +11,7 @@
 // @Suitable          自行观看“# > ”注释内容
 // @Attention         如需引用请注明出处，谢谢合作！
 // @Version           V2.0.45
-// @ScriptURL         https://gist.githubusercontent.com/ddgksf2013/0f76e952f0c4a2579932f45a209b40c3/raw/kuwomusic.vip.js
+// @ScriptURL         https://raw.githubusercontent.com/ly2830/a/refs/heads/main/Scripts/kuwomusic.vip.js
 // ==/UserScript==
 
 
@@ -36,33 +36,33 @@ https?:\/\/wapi\.kuwo\.cn\/openapi\/v1\/app\/pasterAdvert url reject-200
 # > 应用内弹窗及右下角@ddgksf2013
 ^https?:\/\/mobilead\.kuwo\.cn\/ url reject-200
 # > 搜索框处理@ddgksf2013
-https?:\/\/searchrecterm\.kuwo\.cn\/recterm\.s url script-response-body https://gist.githubusercontent.com/ddgksf2013/0f76e952f0c4a2579932f45a209b40c3/raw/kuwomusic.vip.js
+https?:\/\/searchrecterm\.kuwo\.cn\/recterm\.s url script-response-body https://raw.githubusercontent.com/ly2830/a/refs/heads/main/Scripts/kuwomusic.vip.js
 # > 会员页广告@ddgksf2013
-https?:\/\/appi\.kuwo\.cn\/kuwopay\/vip-tab\/page\/cells url script-response-body https://gist.githubusercontent.com/ddgksf2013/0f76e952f0c4a2579932f45a209b40c3/raw/kuwomusic.vip.js
+https?:\/\/appi\.kuwo\.cn\/kuwopay\/vip-tab\/page\/cells url script-response-body https://raw.githubusercontent.com/ly2830/a/refs/heads/main/Scripts/kuwomusic.vip.js
 # > 会员页顶部广告tab@ddgksf2013
-https?:\/\/appi\.kuwo\.cn\/kuwopay\/vip-tab\/setting url script-response-body https://gist.githubusercontent.com/ddgksf2013/0f76e952f0c4a2579932f45a209b40c3/raw/kuwomusic.vip.js
+https?:\/\/appi\.kuwo\.cn\/kuwopay\/vip-tab\/setting url script-response-body https://raw.githubusercontent.com/ly2830/a/refs/heads/main/Scripts/kuwomusic.vip.js
 # > 开屏广告@ddgksf2013
-https?:\/\/rich\.kuwo\.cn\/AdService url script-response-body https://gist.githubusercontent.com/ddgksf2013/0f76e952f0c4a2579932f45a209b40c3/raw/kuwomusic.vip.js
+https?:\/\/rich\.kuwo\.cn\/AdService url script-response-body https://raw.githubusercontent.com/ly2830/a/refs/heads/main/Scripts/kuwomusic.vip.js
 # > 数字专辑@ddgksf2013
-^https?:\/\/musicpay\.kuwo\.cn\/music\.pay\?newver url script-response-body https://gist.githubusercontent.com/ddgksf2013/0f76e952f0c4a2579932f45a209b40c3/raw/kuwomusic.vip.js
+^https?:\/\/musicpay\.kuwo\.cn\/music\.pay\?newver url script-response-body https://raw.githubusercontent.com/ly2830/a/refs/heads/main/Scripts/kuwomusic.vip.js
 # > 听书权限接口1@ddgksf2013
-^https?:\/\/[a-z0-9A-Z]+\.(kuwo|lrts)\.(cn|me)\/a\.p url script-response-body https://gist.githubusercontent.com/ddgksf2013/0f76e952f0c4a2579932f45a209b40c3/raw/kuwomusic.vip.js
+^https?:\/\/[a-z0-9A-Z]+\.(kuwo|lrts)\.(cn|me)\/a\.p url script-response-body https://raw.githubusercontent.com/ly2830/a/refs/heads/main/Scripts/kuwomusic.vip.js
 # > 听书权限接口2@ddgksf2013
-^https?:\/\/.*\.kuwo\.cn\/v2\/api\/pay\/vip\/extraVipStatus url script-response-body https://gist.githubusercontent.com/ddgksf2013/0f76e952f0c4a2579932f45a209b40c3/raw/kuwomusic.vip.js
+^https?:\/\/.*\.kuwo\.cn\/v2\/api\/pay\/vip\/extraVipStatus url script-response-body https://raw.githubusercontent.com/ly2830/a/refs/heads/main/Scripts/kuwomusic.vip.js
 # > 新版vip接口1@ddgksf2013
-^https?:\/\/vip1\.kuwo\.cn\/vip\/enc\/user\/vip\?op=ui url script-response-body https://gist.githubusercontent.com/ddgksf2013/0f76e952f0c4a2579932f45a209b40c3/raw/kuwomusic.vip.js
+^https?:\/\/vip1\.kuwo\.cn\/vip\/enc\/user\/vip\?op=ui url script-response-body https://raw.githubusercontent.com/ly2830/a/refs/heads/main/Scripts/kuwomusic.vip.js
 # > 新版vip接口2@ddgksf2013
-^https?:\/\/vip1\.kuwo\.cn\/vip\/v2\/userbase\/vip\?op=get url script-response-body https://gist.githubusercontent.com/ddgksf2013/0f76e952f0c4a2579932f45a209b40c3/raw/kuwomusic.vip.js
+^https?:\/\/vip1\.kuwo\.cn\/vip\/v2\/userbase\/vip\?op=get url script-response-body https://raw.githubusercontent.com/ly2830/a/refs/heads/main/Scripts/kuwomusic.vip.js
 # > 旧版vip接口@ddgksf2013
-^https?:\/\/vip1\.kuwo\.cn\/vip\/v2\/user\/vip\?(uid|op=ui) url script-response-body https://gist.githubusercontent.com/ddgksf2013/0f76e952f0c4a2579932f45a209b40c3/raw/kuwomusic.vip.js
+^https?:\/\/vip1\.kuwo\.cn\/vip\/v2\/user\/vip\?(uid|op=ui) url script-response-body https://raw.githubusercontent.com/ly2830/a/refs/heads/main/Scripts/kuwomusic.vip.js
 # > 皮肤解锁@ddgksf2013
-^https?:\/\/vip1\.kuwo\.cn\/vip\/v2\/theme url script-response-body https://gist.githubusercontent.com/ddgksf2013/0f76e952f0c4a2579932f45a209b40c3/raw/kuwomusic.vip.js
+^https?:\/\/vip1\.kuwo\.cn\/vip\/v2\/theme url script-response-body https://raw.githubusercontent.com/ly2830/a/refs/heads/main/Scripts/kuwomusic.vip.js
 # > 下载接口@ddgksf2013
-^https?:\/\/musicpay\.kuwo\.cn\/music\.pay\?ui url script-request-header https://gist.githubusercontent.com/ddgksf2013/0f76e952f0c4a2579932f45a209b40c3/raw/kuwomusic.vip.js
+^https?:\/\/musicpay\.kuwo\.cn\/music\.pay\?ui url script-request-header https://raw.githubusercontent.com/ly2830/a/refs/heads/main/Scripts/kuwomusic.vip.js
 # > 我的页面卡片@ddgksf2013
-^https?:\/\/appi.kuwo.cn/kuwopay/personal/cells url script-response-body https://gist.githubusercontent.com/ddgksf2013/0f76e952f0c4a2579932f45a209b40c3/raw/kuwomusic.vip.js
+^https?:\/\/appi.kuwo.cn/kuwopay/personal/cells url script-response-body https://raw.githubusercontent.com/ly2830/a/refs/heads/main/Scripts/kuwomusic.vip.js
 # > 音乐播放接口@ddgksf2013
-^https:\/\/[a-z0-9A-Z]+\.kuwo\.cn\/mobi\.s\?f=kwxs url script-response-body https://gist.githubusercontent.com/ddgksf2013/0f76e952f0c4a2579932f45a209b40c3/raw/kuwomusic.vip.js
+^https:\/\/[a-z0-9A-Z]+\.kuwo\.cn\/mobi\.s\?f=kwxs url script-response-body https://raw.githubusercontent.com/ly2830/a/refs/heads/main/Scripts/kuwomusic.vip.js
 
 
 [mitm]
