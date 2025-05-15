@@ -1,12 +1,9 @@
 #!name = 闲鱼去广告
 #!desc = 移除开屏广告、商品信息流广告、搜索栏填充词、我的页面推广横幅。
-#!openUrl = https://apps.apple.com/app/id510909506
-#!author = 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!author = 可莉
 #!tag = 去广告
 #!system = 
 #!system_version = 
-#!loon_version = 3.2.4(787)
-#!homepage = https://github.com/luestr/ProxyResource/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/FleaMarket.png
 #!date = 2025-05-13 00:22:01
 
@@ -37,6 +34,10 @@ AND, ((URL-REGEX, "^http:\/\/.+\/amdc\/mobileDispatch"), (USER-AGENT, "%E9%97%B2
 ^https:\/\/g-acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\/ response-body-json-jq '.data.resultList |= map(if .data.item.main.exContent.dislikeFeedback.clickParam.args.bizType == "ad" then empty else . end)'
 
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.item\.search\.activate\/ response-body-json-jq '.data.cardList |= map(if has("cardData") and (.cardData | has("hotwords")) then .cardData |= del(.hotwords) else . end)'
+
+[Script]
+# 我的页面
+http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.idle\.user\.page\.my\.adapter\/ script-path = https://raw.githubusercontent.com/ly2830/a/refs/heads/main/Scripts/xianyu.js, requires-body = true, tag = 移除我的页面推广
 
 [MitM]
 hostname = acs.m.goofish.com, g-acs.m.goofish.com
