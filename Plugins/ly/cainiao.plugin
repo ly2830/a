@@ -1,7 +1,7 @@
 #!name = 菜鸟
 #!desc = 过滤菜鸟广告。
 #!author = RuCu6[https://github.com/RuCu6]
-#!icon =https://raw.githubusercontent.com/ly2830/a/refs/heads/main/Icons/app/cainiao.png
+#!icon = https://raw.githubusercontent.com/ly2830/a/refs/heads/main/Icons/app/cainiao.png
 #!date = 2024-09-27 11:50
 
 [Rule]
