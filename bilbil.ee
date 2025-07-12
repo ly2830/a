@@ -1,0 +1,176 @@
+#!name=哔哩哔哩净化
+#!desc=干杯
+#!author=
+url_rewrites:
+  - match: ^https?:\/\/bilibili.2025.04.02/c136
+    location: http://reject/
+    status_code: 200
+  - match: ^https?:\/\/api\.bilibili\.com\/pgc\/activity\/deliver\/material\/receive
+    location: http://reject/
+    status_code: 200
+  - match: ^https?:\/\/api\.bilibili\.com\/x\/vip\/ads\/material\/report
+    location: http://reject/
+    status_code: 200
+  - match: ^https://api.bilibili.com/pgc/season/player/cards
+    location: http://reject/
+    status_code: 200
+  - match: ^https?:\/\/api\.bilibili\.com\/pgc\/season\/player\/ogv\/cards
+    location: http://reject/
+    status_code: 200
+  - match: ^https://app.bilibili.com/x/v2/splash/show
+    location: http://reject/
+    status_code: 200
+  - match: ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash|GetActivityTab)
+    location: http://reject/
+    status_code: 200
+  - match: ^https?:\/\/app\.bilibili\.com\/x\/v\d\/search\/defaultwords
+    location: http://reject/
+    status_code: 200
+  - match: ^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.interface\.v1\.Search\/Default
+    location: http://reject/
+    status_code: 200
+scriptings:
+  - http_response:
+      name: bilibili_json.js
+      script_url: >-
+        https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/bilibili_json.js
+      match: >-
+        ^https?:\/\/api\.bili(api|bili)\.(net|com)\/pgc\/season\/app\/related\/recommend\?
+      body_required: true
+      timeout: 60
+  - http_response:
+      name: bilibili_json.js
+      script_url: >-
+        https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/bilibili_json.js
+      match: >-
+        ^https?:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v\d\/ecommerce-user\/get_shopping_info\?
+      body_required: true
+      timeout: 60
+  - http_response:
+      name: bilibili_json.js
+      script_url: >-
+        https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/bilibili_json.js
+      match: >-
+        ^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom
+      body_required: true
+      timeout: 60
+  - http_response:
+      name: bilibili_json.js
+      script_url: >-
+        https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/bilibili_json.js
+      match: >-
+        ^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list
+      body_required: true
+      timeout: 60
+  - http_response:
+      name: bilibili_json.js
+      script_url: >-
+        https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/bilibili_json.js
+      match: >-
+        ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?
+      body_required: true
+      timeout: 60
+  - http_response:
+      name: bilibili_json.js
+      script_url: >-
+        https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/bilibili_json.js
+      match: >-
+        ^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-interface\/v2\/index\/feed
+      body_required: true
+      timeout: 60
+  - http_response:
+      name: bilibili_json.js
+      script_url: >-
+        https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/bilibili_json.js
+      match: >-
+        ^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index
+      body_required: true
+      timeout: 60
+  - http_response:
+      name: bilibili_json.js
+      script_url: >-
+        https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/bilibili_json.js
+      match: >-
+        ^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/bangumi
+      body_required: true
+      timeout: 60
+  - http_response:
+      name: bilibili_json.js
+      script_url: >-
+        https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/bilibili_json.js
+      match: >-
+        ^https?:\/\/api\.(bilibili|biliapi)\.(com|net)\/pgc\/page\/cinema\/tab\?
+      body_required: true
+      timeout: 60
+  - http_response:
+      name: bilibili_json.js
+      script_url: >-
+        https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/bilibili_json.js
+      match: >-
+        ^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab
+      body_required: true
+      timeout: 60
+  - http_response:
+      name: bilibili_json.js
+      script_url: >-
+        https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/bilibili_json.js
+      match: >-
+        ^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine
+      body_required: true
+      timeout: 60
+  - http_response:
+      name: bilibili_json.js
+      script_url: >-
+        https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/bilibili_json.js
+      match: >-
+        ^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity
+      body_required: true
+      timeout: 60
+  - http_response:
+      name: bilibili_json.js
+      script_url: >-
+        https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/bilibili_json.js
+      match: >-
+        ^https://app.bilibili.com/x/v2/search/square
+      body_required: true
+      timeout: 60
+  - http_response:
+      name: bilibili.protobuf.js
+      script_url: >-
+        https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/bilibili.protobuf.js
+      match: >-
+        ^https:\/\/(?:grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.(?:app\.(?:interface\.v1\.(?:Teenagers\/ModeStatus|Search\/DefaultWords)|show\.v1\.Popular\/Index|dynamic\.v2\.Dynamic\/DynAll|view(?:unite)?\.v1\.View\/(?:View|ViewProgress|TFInfo|RelatesFeed)|playurl\.v1\.PlayURL\/PlayView|playerunite\.v1\.Player\/PlayViewUnite)|polymer\.app\.search\.v1\.Search\/SearchAll|community\.service\.dm\.v1\.DM\/DmView|main\.community\.reply\.v1\.Reply\/MainList|pgc\.gateway\.player\.v2\.PlayURL\/PlayView)
+      body_required: true
+      timeout: 60
+  - http_response:
+      name: bilibili_json.js
+      script_url: >-
+        https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/bilibili_json.js
+      match: >-
+        ^https?:\/\/.*\.hdslb\.com\/bfs\/subtitle\/.+\.json
+      body_required: true
+      timeout: 60
+  - http_response:
+      name: bilibili_json.js
+      script_url: >-
+        https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/bilibili_json.js
+      match: >-
+        ^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?
+      body_required: true
+      timeout: 60
+mitm:
+  hostnames:
+    - '-broadcast.chat.bilibili.com'
+    - '-cm.bilibili.com'
+    - '-*cdn*.biliapi.net'
+    - '-*tracker*.biliapi.net'
+    - 'app.bilibili.com'
+    - 'api.live.bilibili.com'
+    - '*.bilibili.com'
+    - '*.bili*.*'
+    - '*.bilibili.*'
+    - 'grpc.biliapi.net'
+    - '*biliapi.net'
+hostnames:
+    - 'aisubtitle.hdslb.com'
+    - 'i0.hdslb.com]@ddgksf2013'
